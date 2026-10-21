@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+</head>
+<body bgcolor="#f4f4f4" style="font-family: Arial, sans-serif; margin: 10px;">
+
+
+    <table border="2" width="100%" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+        
+        <tr>
+            <td colspan="2" bgcolor="#1a365d" align="center">
+                <font color="#ffffff">
+                    <h1 style="margin: 5px;">National Institute of Technology & Science</h1>
+                    <p style="margin: 5px;">Empowering Minds, Shaping Futures | Excellence in Higher Education</p>
+                </font>
+            </td>
+        </tr>
+
+        <tr valign="top">
+
+            <td width="25%" bgcolor="#eef2f5">
+                <h3>Navigation Menu</h3>
+                <hr>
+                <p>Click any page to load in main frame:</p>
+                
+
+                <ul>
+                    <li><a href="about:blank" onclick="loadPage('home')" target="contentFrame">Home</a></li>
+                    <br>
+                    <li><a href="about:blank" onclick="loadPage('about')" target="contentFrame">About Us</a></li>
+                    <br>
+                    <li><a href="about:blank" onclick="loadPage('courses')" target="contentFrame">Courses</a></li>
+                    <br>
+                    <li><a href="about:blank" onclick="loadPage('faculty')" target="contentFrame">Faculty</a></li>
+                    <br>
+                    <li><a href="about:blank" onclick="loadPage('contact')" target="contentFrame">Contact Us</a></li>
+                </ul>
+                <hr>
+                <p><small><b>Note:</b> Standard HTML iframe targeting loaded page directly.</small></p>
+            </td>
+
+            <td width="75%" bgcolor="#ffffff">
+
+                <iframe id="mainIframe" name="contentFrame" width="100%" height="450px" frameborder="0" srcdoc='
+                    <!DOCTYPE html>
+                    <html>
+                    <body style="font-family: Arial, sans-serif; padding: 15px;">
+                        <h2>Welcome to Our College</h2>
+                        <hr>
+                        <p>Welcome to National Institute of Technology & Science. We are committed to providing world-class technical and higher education to prepare students for successful careers.</p>
+                        
+                        <h3>Latest Campus Announcements</h3>
+                        <ul>
+                            <li><b>Admissions Open:</b> Applications for the upcoming academic year are now live!</li>
+                            <li><b>Annual Sports Meet:</b> Registration opens next Monday.</li>
+                            <li><b>Campus Drive:</b> Top IT and core engineering companies visiting next month.</li>
+                        </ul>
+                    </body>
+                    </html>
+                '></iframe>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td colspan="2" bgcolor="#222222" align="center">
+                <font color="#ffffff">
+                    <p><small>&copy; 2026 National Institute of Technology & Science. All Rights Reserved.</small></p>
+                </font>
+            </td>
+        </tr>
+
+    </table>
+
+    <script>
+
+        const pages = {
+            home: `
+                <!DOCTYPE html>
+                <html>
+                <body style="font-family: Arial, sans-serif; padding: 15px;">
+                    <h2>Welcome to Our College</h2>
+                    <hr>
+                    <p>Welcome to National Institute of Technology & Science. We are committed to providing world-class technical and higher education to prepare students for successful careers.</p>
+                    
+                    <h3>Latest Campus Announcements</h3>
+                    <ul>
+                        <li><b>Admissions Open:</b> Applications for the upcoming academic year are now live!</li>
+                        <li><b>Annual Sports Meet:</b> Registration opens next Monday.</li>
+                        <li><b>Campus Drive:</b> Top IT and core engineering companies visiting next month.</li>
+                    </ul>
+                </body>
+                </html>
+            `,
+            about: `
+                <!DOCTYPE html>
+                <html>
+                <body style="font-family: Arial, sans-serif; padding: 15px;">
+                    <h2>About Our Institution</h2>
+                    <hr>
+                    <p>Established in 1998, our institute has been a pioneer in engineering, technology, and management education.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>To cultivate innovative leaders, ethical researchers, and skilled professionals globally recognized for excellence.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <ul>
+                        <li>Deliver state-of-the-art technical education.</li>
+                        <li>Foster cutting-edge research and innovation.</li>
+                        <li>Maintain industry-relevant curriculum and partnerships.</li>
+                    </ul>
+                </body>
+                </html>
+            `,
+            courses: `
+                <!DOCTYPE html>
+                <html>
+                <body style="font-family: Arial, sans-serif; padding: 15px;">
+                    <h2>Courses & Academic Programs</h2>
+                    <hr>
+                    
+                    <h3>1. Bachelor of Computer Applications (BCA)</h3>
+                    <p><b>Duration:</b> 3 Years | <b>Eligibility:</b> 10+2 with Mathematics</p>
+                    <p>Focuses on programming, web development, software engineering, and database management.</p>
+                    
+                    <h3>2. Bachelor of Technology (B.Tech in CSE)</h3>
+                    <p><b>Duration:</b> 4 Years | <b>Eligibility:</b> 10+2 with Physics, Chemistry & Math</p>
+                    <p>Covers Artificial Intelligence, Data Science, Networking, and Systems Design.</p>
+
+                    <h3>3. Bachelor of Business Administration (BBA)</h3>
+                    <p><b>Duration:</b> 3 Years | <b>Eligibility:</b> 10+2 in any stream</p>
+                    <p>Covers business management, financial accounting, marketing, and human resources.</p>
+                </body>
+                </html>
+            `,
+            faculty: `
+                <!DOCTYPE html>
+                <html>
+                <body style="font-family: Arial, sans-serif; padding: 15px;">
+                    <h2>Our Department Faculty</h2>
+                    <hr>
+                    <p>Meet our highly qualified professors and academic leaders:</p>
+                    
+                    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                        <tr bgcolor="#1a365d">
+                            <th><font color="#ffffff">Faculty Name</font></th>
+                            <th><font color="#ffffff">Designation</font></th>
+                            <th><font color="#ffffff">Department</font></th>
+                        </tr>
+                        <tr>
+                            <td>Dr. Robert Smith</td>
+                            <td>Head of Department (HOD)</td>
+                            <td>Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Sarah Johnson</td>
+                            <td>Associate Professor</td>
+                            <td>Business Administration</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Alan Walker</td>
+                            <td>Assistant Professor</td>
+                            <td>Mathematics & Physics</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Emily Davis</td>
+                            <td>Senior Lecturer</td>
+                            <td>Information Technology</td>
+                        </tr>
+                    </table>
+                </body>
+                </html>
+            `,
+            contact: `
+                <!DOCTYPE html>
+                <html>
+                <body style="font-family: Arial, sans-serif; padding: 15px;">
+                    <h2>Contact Us</h2>
+                    <hr>
+                    <p>Feel free to reach out to our administration office for queries and admission details.</p>
+                    
+                    <p><b>Campus Address:</b> 123 Education Boulevard, University Campus, City 100001</p>
+                    <p><b>Helpline Phone:</b> +1 (800) 123-4567 / +1 (800) 765-4321</p>
+                    <p><b>Official Email:</b> admissions@college-edu.org</p>
+                    <p><b>Office Timings:</b> Monday through Friday (9:00 AM – 5:00 PM)</p>
+                </body>
+                </html>
+            `
+        };
+
+        function loadPage(pageKey) {
+            const iframe = document.getElementById('mainIframe');
+            iframe.srcdoc = pages[pageKey];
+        }
+    </script>
+
+</body>
+</html>

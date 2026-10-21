@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 30px;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .table-card {
+            background: #ffffff;
+            border: 1px solid #b0c4de;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            width: 48%;
+            min-width: 500px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .table-title {
+            background-color: #5c6b73;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            font-size: 0.9em;
+            border: 1px solid #dcdcdc;
+        }
+        th {
+            background-color: #e6edf5;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .label-cell {
+            background-color: #f2f5f8;
+            font-weight: bold;
+            width: 35%;
+        }
+        .nested-table-container {
+            padding: 0;
+        }
+        .nested-table {
+            width: 100%;
+            margin: 0;
+            border: none;
+        }
+        .nested-table th, .nested-table td {
+            border: 1px solid #dcdcdc;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Nested Tables Assignment</h2>
+
+    <div class="container">
+
+        <div class="table-card">
+            <div class="table-title">1. Employee Salary Slip (Nested Table)</div>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <tr>
+                    <td class="label-cell">Employee ID</td>
+                    <td>EMP202</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Employee Name</td>
+                    <td>Pooja Sharma</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Department</td>
+                    <td>Finance</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Designation</td>
+                    <td>Accountant</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Month</td>
+                    <td>August 2025</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Salary Details</td>
+                    <td class="nested-table-container">
+                        <table class="nested-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th colspan="2">Earnings</th>
+                                <th colspan="2">Deductions</th>
+                            </tr>
+                            <tr>
+                                <th>Item</th>
+                                <th>Amount</th>
+                                <th>Item</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr>
+                                <td>Basic Pay</td>
+                                <td class="text-right">₹28,000</td>
+                                <td>PF</td>
+                                <td class="text-right">₹2,000</td>
+                            </tr>
+                            <tr>
+                                <td>HRA</td>
+                                <td class="text-right">₹7,000</td>
+                                <td>Tax</td>
+                                <td class="text-right">₹1,800</td>
+                            </tr>
+                            <tr>
+                                <td>DA</td>
+                                <td class="text-right">₹4,000</td>
+                                <td>Loan</td>
+                                <td class="text-right">₹1,000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total Earnings</strong></td>
+                                <td class="text-right"><strong>₹39,000</strong></td>
+                                <td><strong>Total Deductions</strong></td>
+                                <td class="text-right"><strong>₹4,800</strong></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell"><strong>Net Salary</strong></td>
+                    <td><strong>₹34,200</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-card">
+            <div class="table-title">2. Student Profile & Marks (Nested Table)</div>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <tr>
+                    <td class="label-cell">Student Name</td>
+                    <td>Ritika Verma</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Roll Number</td>
+                    <td>1023</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Class</td>
+                    <td>BCA - 2nd Year</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Details</td>
+                    <td class="nested-table-container">
+                        <table class="nested-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>Grade</th>
+                            </tr>
+                            <tr>
+                                <td>Computer Networks</td>
+                                <td class="text-center">88</td>
+                                <td class="text-center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Web Technologies</td>
+                                <td class="text-center">85</td>
+                                <td class="text-center">A</td>
+                            </tr>
+                            <tr>
+                                <td>Database Management</td>
+                                <td class="text-center">92</td>
+                                <td class="text-center">A+</td>
+                            </tr>
+                            <tr>
+                                <td>Discrete Mathematics</td>
+                                <td class="text-center">78</td>
+                                <td class="text-center">B+</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-card">
+            <div class="table-title">3. Product Order Summary (Nested Table)</div>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <tr>
+                    <td class="label-cell">Order ID</td>
+                    <td>ORD4578</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Customer Name</td>
+                    <td>Amanpreet Kaur</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Order Date</td>
+                    <td>12-09-2025</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Order Items</td>
+                    <td class="nested-table-container">
+                        <table class="nested-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price (₹)</th>
+                                <th>Amount (₹)</th>
+                            </tr>
+                            <tr>
+                                <td>Laptop</td>
+                                <td class="text-center">1</td>
+                                <td class="text-right">45,000</td>
+                                <td class="text-right">45,000</td>
+                            </tr>
+                            <tr>
+                                <td>Mouse</td>
+                                <td class="text-center">1</td>
+                                <td class="text-right">1,200</td>
+                                <td class="text-right">1,200</td>
+                            </tr>
+                            <tr>
+                                <td>Backpack</td>
+                                <td class="text-center">1</td>
+                                <td class="text-right">2,500</td>
+                                <td class="text-right">2,500</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right"><strong>Total Amount</strong></td>
+                                <td class="text-right"><strong>48,700</strong></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-card">
+            <div class="table-title">4. Hotel Booking (Nested Table)</div>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <tr>
+                    <td class="label-cell">Guest Name</td>
+                    <td>Simran Kaur</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Booking ID</td>
+                    <td>HBK7890</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Room Type</td>
+                    <td>Deluxe Room</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Booking Details</td>
+                    <td class="nested-table-container">
+                        <table class="nested-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Check-in Date</th>
+                                <th>Check-out Date</th>
+                                <th>Guests</th>
+                                <th>Charges (₹)</th>
+                            </tr>
+                            <tr>
+                                <td class="text-center">15-10-2025</td>
+                                <td class="text-center">18-10-2025</td>
+                                <td class="text-center">2</td>
+                                <td class="text-right">7,500</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right"><strong>Total Charges</strong></td>
+                                <td class="text-right"><strong>7,500</strong></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

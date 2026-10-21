@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 40px;
+            color: #333;
+        }
+        .form-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        fieldset {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fafbfc;
+        }
+        legend {
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 0 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #475569;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        input[type="time"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 0.95em;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 20px;
+            margin-bottom: 0;
+            color: #334155;
+            cursor: pointer;
+        }
+        .radio-group input,
+        .checkbox-group input {
+            margin-right: 6px;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            width: 50%;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        input[type="submit"] {
+            background-color: #2563eb;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+        input[type="reset"] {
+            background-color: #64748b;
+            color: white;
+        }
+        input[type="reset"]:hover {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Online Course Registration</h2>
+
+        <form action="/register-success" method="POST" target="_self">
+
+
+            <input type="hidden" name="form_identifier" value="Online Course Registration">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="fullname">Student Name: *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address: *</label>
+                    <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number: *</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="9876543210" pattern="[0-9]{10}" required>
+                </div>
+\
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="16" max="100" placeholder="Enter your age">
+                </div>
+\
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password: *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a secure password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender: *</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Preferences & Details</legend>
+
+                <div class="form-group">
+                    <label for="course">Select Course: *</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Choose a Course --</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Python Programming">Python Programming</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="class-time">Preferred Class Time:</label>
+                    <input type="time" id="class-time" name="class_time">
+                </div>
+
+                <div class="form-group">
+                    <label>Existing Skills (Select all that apply):</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="skill-html" name="skills" value="HTML">
+                        <label for="skill-html">HTML</label>
+
+                        <input type="checkbox" id="skill-css" name="skills" value="CSS">
+                        <label for="skill-css">CSS</label>
+
+                        <input type="checkbox" id="skill-js" name="skills" value="JavaScript">
+                        <label for="skill-js">JavaScript</label>
+
+                        <input type="checkbox" id="skill-python" name="skills" value="Python">
+                        <label for="skill-python">Python</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address / Additional Information:</label>
+                    <textarea id="address" name="address" placeholder="Enter your complete address or any additional notes..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Supporting Document</legend>
+
+                <div class="form-group">
+                    <label for="document">Upload Document or Photograph:</label>
+                    <input type="file" id="document" name="document" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+            </fieldset>
+
+            <div class="button-group">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset Form">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
